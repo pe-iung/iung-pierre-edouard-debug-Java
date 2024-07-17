@@ -3,7 +3,8 @@ package com.hemebiotech.symptomreader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReadSymptomDataFromFile implements SymptomReader {
 
@@ -13,9 +14,9 @@ public class ReadSymptomDataFromFile implements SymptomReader {
 		this.filepath = filepath;
 	}
 
-	@Override
-	public List<String> getSymptoms() throws IOException{
-		ArrayList<String> result = new ArrayList<String>();
+    @Override
+    public List<String> getSymptoms() throws IOException {
+        ArrayList<String> result = new ArrayList<String>();
 
 		if (filepath != null) {
 			try {
@@ -32,9 +33,8 @@ public class ReadSymptomDataFromFile implements SymptomReader {
 			}
 		}
 
-		return result;
-	}
-
+        return result;
+    }
 
 
 }

@@ -12,6 +12,13 @@ public class WriteSymptomDataToFile implements SymptomWriter {
         this.filepath = filepath;
     }
 
+    /**
+     * <p> write the symptoms in a text file
+     *
+     * @param symptoms the MAP of counted and sorted symptoms
+     * @return a Map of counted (but unsorted) <symptoms,count>
+     * this Map will not be sorted alphabetically yet
+     */
     @Override
     public void writeSymptoms(Map<String, Integer> symptoms) throws IOException {
 
