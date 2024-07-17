@@ -1,4 +1,4 @@
-package com.hemebiotech.symptomWriter;
+package com.hemebiotech.symptomwriter;
 
 import java.io.IOException;
 import java.util.Map;

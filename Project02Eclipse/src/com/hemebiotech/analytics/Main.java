@@ -1,7 +1,7 @@
 package com.hemebiotech.analytics;
 
-import com.hemebiotech.symptomManager.SymptomManager;
-import com.hemebiotech.symptomManager.SymptomManagerImpl;
+import com.hemebiotech.symptommanager.SymptomManager;
+import com.hemebiotech.symptommanager.SymptomManagerImpl;
 
 public class Main {
 

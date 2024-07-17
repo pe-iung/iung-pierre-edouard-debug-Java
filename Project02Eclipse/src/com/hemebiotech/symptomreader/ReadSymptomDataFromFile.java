@@ -1,4 +1,4 @@
-package com.hemebiotech.symptomReader;
+package com.hemebiotech.symptomreader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

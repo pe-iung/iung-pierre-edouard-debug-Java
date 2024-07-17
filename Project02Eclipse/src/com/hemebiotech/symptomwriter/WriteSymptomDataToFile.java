@@ -1,4 +1,4 @@
-package com.hemebiotech.symptomWriter;
+package com.hemebiotech.symptomwriter;
 
 import java.io.FileWriter;
 import java.io.IOException;

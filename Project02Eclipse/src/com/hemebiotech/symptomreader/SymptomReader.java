@@ -1,4 +1,4 @@
-package com.hemebiotech.symptomReader;
+package com.hemebiotech.symptomreader;
 
 import java.io.IOException;
 import java.util.List;

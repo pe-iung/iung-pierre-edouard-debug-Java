@@ -1,4 +1,4 @@
-package com.hemebiotech.symptomCounter;
+package com.hemebiotech.symptomcounter;
 
 import java.util.HashMap;
 import java.util.List;

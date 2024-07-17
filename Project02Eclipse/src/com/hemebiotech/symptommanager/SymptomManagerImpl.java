@@ -1,11 +1,11 @@
-package com.hemebiotech.symptomManager;
+package com.hemebiotech.symptommanager;
 
-import com.hemebiotech.symptomCounter.CountSymptomsFromList;
-import com.hemebiotech.symptomCounter.SymptomCounter;
-import com.hemebiotech.symptomReader.ReadSymptomDataFromFile;
-import com.hemebiotech.symptomReader.SymptomReader;
-import com.hemebiotech.symptomWriter.SymptomWriter;
-import com.hemebiotech.symptomWriter.WriteSymptomDataToFile;
+import com.hemebiotech.symptomcounter.CountSymptomsFromList;
+import com.hemebiotech.symptomcounter.SymptomCounter;
+import com.hemebiotech.symptomreader.ReadSymptomDataFromFile;
+import com.hemebiotech.symptomreader.SymptomReader;
+import com.hemebiotech.symptomwriter.SymptomWriter;
+import com.hemebiotech.symptomwriter.WriteSymptomDataToFile;
 
 import java.io.IOException;
 import java.util.List;
