@@ -19,13 +19,18 @@ public class SymptomManagerImpl implements SymptomManager {
     private static final String INPUT_SYMPTOMS_FILE = "Project02Eclipse/symptoms.txt";
     private static final String OUTPUT_SYMPTOMS_FILE = "Project02Eclipse/result.out";
 
-    SymptomReader symptomReader = new ReadSymptomDataFromFile(INPUT_SYMPTOMS_FILE);
-    SymptomCounter symptomCounter = new CountSymptomsFromList();
+    private final SymptomReader symptomReader;
+    private final SymptomCounter symptomCounter;
+    private final SymptomWriter symptomWriter;
 
-    SymptomWriter symptomWriter = new WriteSymptomDataToFile(OUTPUT_SYMPTOMS_FILE);
+    public SymptomManagerImpl() throws Exception {
+        symptomReader = new ReadSymptomDataFromFile(INPUT_SYMPTOMS_FILE);
+        symptomCounter = new CountSymptomsFromList();
+        symptomWriter = new WriteSymptomDataToFile(OUTPUT_SYMPTOMS_FILE);
+    }
 
 
-    public List<String> getSymptoms() throws IOException {
+    public List<String> getSymptoms() throws Exception {
         return symptomReader.getSymptoms();
     }
 
@@ -37,7 +42,7 @@ public class SymptomManagerImpl implements SymptomManager {
         return symptomCounter.sortSymptoms(unsortedSymptoms);
     }
 
-    public void writeSymptoms(Map<String, Integer> symptoms) throws IOException {
+    public void writeSymptoms(Map<String, Integer> symptoms) throws Exception {
         symptomWriter.writeSymptoms(symptoms);
     }
 

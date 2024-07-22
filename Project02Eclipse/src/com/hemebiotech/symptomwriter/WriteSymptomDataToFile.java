@@ -6,9 +6,13 @@ import java.util.Map;
 
 public class WriteSymptomDataToFile implements SymptomWriter {
 
-    private String filepath;
+    private final String filepath;
 
-    public WriteSymptomDataToFile (String filepath) {
+    public WriteSymptomDataToFile(String filepath)  throws  IllegalArgumentException  {
+        if (filepath == null || filepath.isBlank()) {
+            throw new IllegalArgumentException("File path cannot be null or empty");
+        }
+
         this.filepath = filepath;
     }
 
@@ -16,23 +20,17 @@ public class WriteSymptomDataToFile implements SymptomWriter {
      * <p> write the symptoms in a text file
      *
      * @param symptoms the MAP of counted and sorted symptoms
-     * @return a Map of counted (but unsorted) <symptoms,count>
-     * this Map will not be sorted alphabetically yet
+     * @throws IOException
      */
     @Override
     public void writeSymptoms(Map<String, Integer> symptoms) throws IOException {
 
-        if (filepath != null) {
-
-            try {
-                FileWriter writer = new FileWriter(this.filepath);
-                for (Map.Entry<String, Integer> entry : symptoms.entrySet()) {
-                    writer.write(entry.getKey() + ": " + entry.getValue() + "\n");
-                }
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        FileWriter writer = new FileWriter(this.filepath);
+        for (Map.Entry<String, Integer> entry : symptoms.entrySet()) {
+            writer.write(entry.getKey() + ": " + entry.getValue() + "\n");
         }
+        writer.close();
+
+
     }
 }

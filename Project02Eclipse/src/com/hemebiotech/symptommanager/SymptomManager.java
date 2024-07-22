@@ -6,13 +6,13 @@ import java.util.Map;
 
 public interface SymptomManager {
 
-    List<String> getSymptoms() throws IOException;
+    List<String> getSymptoms() throws Exception;
 
     Map<String, Integer> countSymptoms(List<String> symptoms);
 
     Map<String, Integer> sortSymptoms(Map<String, Integer> unsortedSymptoms);
 
-    void writeSymptoms(Map<String, Integer> symptoms) throws IOException;
+    void writeSymptoms(Map<String, Integer> symptoms) throws Exception;
 
 
 }
