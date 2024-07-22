@@ -39,9 +39,8 @@ public class CountSymptomsFromList implements SymptomCounter {
      *                         where key = a given symptom,
      *                         value = counter for the given symptom
      * @return a TreeMap of sorted <symptoms,count>
-     * this TreeMap will automatically sort alphabetically the entries by key, as my key are String
+     * this TreeMap will automatically sort alphabetically the entries by key, as the TreeMap key are Strings
      */
-    // Creating a TreeMap,
     public Map<String, Integer> sortSymptoms(Map<String, Integer> unsortedSymptoms) {
 
         return new TreeMap<>(unsortedSymptoms);

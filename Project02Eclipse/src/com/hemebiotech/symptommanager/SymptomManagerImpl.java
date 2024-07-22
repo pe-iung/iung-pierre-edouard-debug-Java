@@ -6,13 +6,11 @@ import com.hemebiotech.symptomreader.ReadSymptomDataFromFile;
 import com.hemebiotech.symptomreader.SymptomReader;
 import com.hemebiotech.symptomwriter.SymptomWriter;
 import com.hemebiotech.symptomwriter.WriteSymptomDataToFile;
-
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
 /**
- * SymptomManagerImpl is coordinating the reading, counting/sorting and writting part of this program
+ * SymptomManagerImpl is coordinating the reading, counting/sorting and writing part of this program
  */
 public class SymptomManagerImpl implements SymptomManager {
 
@@ -22,6 +20,14 @@ public class SymptomManagerImpl implements SymptomManager {
     private final SymptomReader symptomReader;
     private final SymptomCounter symptomCounter;
     private final SymptomWriter symptomWriter;
+
+    /**
+     * <p> constructor for SymptomManagerImpl implementing SymptomManager
+     *
+     * @throws Exception in case of issue when ReadSymptomDataFromFile, CountSymptomsFromList,
+     * or WriteSymptomDataToFile objects are created with args input & output file
+     */
+
 
     public SymptomManagerImpl() throws Exception {
         symptomReader = new ReadSymptomDataFromFile(INPUT_SYMPTOMS_FILE);

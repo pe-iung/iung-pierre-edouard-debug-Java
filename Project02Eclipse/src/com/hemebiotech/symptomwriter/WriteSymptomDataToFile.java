@@ -4,9 +4,21 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * <p> class WriteSymptomDataToFile implementing SymptomWriter
+ * to write the result data in an output file
+ */
+
 public class WriteSymptomDataToFile implements SymptomWriter {
 
     private final String filepath;
+
+    /**
+     * <p> constructor for WriteSymptomDataToFile implementing SymptomWriter
+     *
+     * @param filepath the MAP of counted and sorted symptoms
+     * @throws IllegalArgumentException if filepath is null or blank
+     */
 
     public WriteSymptomDataToFile(String filepath)  throws  IllegalArgumentException  {
         if (filepath == null || filepath.isBlank()) {
@@ -20,7 +32,7 @@ public class WriteSymptomDataToFile implements SymptomWriter {
      * <p> write the symptoms in a text file
      *
      * @param symptoms the MAP of counted and sorted symptoms
-     * @throws IOException
+     * @throws IOException when writing in result file
      */
     @Override
     public void writeSymptoms(Map<String, Integer> symptoms) throws IOException {
