@@ -1,17 +1,19 @@
 package com.hemebiotech.symptomreader;
 
-import com.hemebiotech.symptomwriter.WriteSymptomDataToFile;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * class ReadSymptomDataFromFile implementing SymptomReader
+ * to read the symptoms data from an input file
+ */
 public class ReadSymptomDataFromFile implements SymptomReader {
 
     private final String filepath;
 
-    /** <p> constructor for ReadSymptomDataFromFile implementing SymptomWriter
+    /** constructor for ReadSymptomDataFromFile implementing SymptomWriter
      *
      * @param filepath indicates the path to the input file to read
      * @throws IllegalArgumentException if filepath is null or blank
@@ -24,7 +26,7 @@ public class ReadSymptomDataFromFile implements SymptomReader {
         this.filepath = filepath;
     }
 
-    /** <p> getSymptoms method read the symptoms from a file
+    /** getSymptoms method read the symptoms from a file
      *
      * @return a List of symptoms as Strings, this list may have some duplicates symptoms
      * @throws Exception if issues raised while reading the symptoms
@@ -42,9 +44,7 @@ public class ReadSymptomDataFromFile implements SymptomReader {
             }
             reader.close();
 
-
             return result;
-
     }
 
 

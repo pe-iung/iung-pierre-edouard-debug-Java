@@ -5,9 +5,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * CountSymptomsFromList is implementing SymptomCounter
+ * the goal here is to get through a list of symptoms and count them and then sort them
+ */
 public class CountSymptomsFromList implements SymptomCounter {
     /**
-     * <p> Count the symptoms given as inputs of our program
+     * Count the symptoms given as inputs of our program
      *
      * @param symptoms the list of input symptoms
      * @return a Map of counted (but unsorted) <symptoms,count>
@@ -16,7 +20,6 @@ public class CountSymptomsFromList implements SymptomCounter {
 
     @Override
     public Map<String, Integer> countSymptoms(List<String> symptoms) {
-
 
         Map<String, Integer> result = new HashMap<String, Integer>();
 
@@ -33,7 +36,7 @@ public class CountSymptomsFromList implements SymptomCounter {
     }
 
     /**
-     * <p> Sort the symptoms by using a TreeMap as output
+     * Sort the symptoms by using a TreeMap as output
      *
      * @param unsortedSymptoms the Map<key,value> of counted symptoms
      *                         where key = a given symptom,
